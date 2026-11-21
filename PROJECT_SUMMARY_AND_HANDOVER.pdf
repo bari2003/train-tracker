@@ -1,0 +1,202 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [6 0 R 8 0 R 10 0 R] /Count 3 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Courier /Encoding /WinAnsiEncoding >>
+endobj
+6 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 7 0 R >>
+endobj
+7 0 obj
+<< /Length 3964 >>
+stream
+BT /F2 8 Tf 50 810 Td (REAL-TIME TRAIN TRACKER - SYSTEM SUMMARY & HANDOVER REPORT) Tj ET
+0.5 0.5 0.5 RG 0.5 w 50 805 m 545 805 l S 0 0 0 RG
+0.5 0.5 0.5 RG 0.5 w 50 40 m 545 40 l S 0 0 0 RG
+BT /F1 8 Tf 50 30 Td (Generated for AI Handover & Next Development Steps | Page 1) Tj ET
+BT /F2 16 Tf 0.1 0.2 0.4 rg 50 778 Td (Real-Time Train Movement Tracker - Handover Document) Tj ET 0 0 0 rg
+BT /F1 9 Tf 50 756 Td (This document provides a complete technical briefing, architectural audit, file-by-file) Tj ET
+BT /F1 9 Tf 50 744 Td (record of modifications, and an actionable roadmap for AI agents or software engineers) Tj ET
+BT /F1 9 Tf 50 732 Td (continuing development on this system.) Tj ET
+BT /F2 12 Tf 0.15 0.3 0.6 rg 50 702 Td (1. System Overview & Core Capabilities) Tj ET 0 0 0 rg
+BT /F1 9 Tf 50 686 Td (The application is a full-stack railway geospatial tracking and telemetry visualization) Tj ET
+BT /F1 9 Tf 50 674 Td (system based on the 'Visual Representation of Real Time Train Movement' SRS specification.) Tj ET
+BT /F2 9 Tf 50 658 Td (\225 ) Tj ET
+BT /F1 9 Tf 62 658 Td (Search & Schedule: Users can query any Indian Railways train by number \(e.g., 12002,) Tj ET
+BT /F1 9 Tf 62 646 Td (12952\) or name.) Tj ET
+BT /F2 9 Tf 50 632 Td (\225 ) Tj ET
+BT /F1 9 Tf 62 632 Td (Real-Time Telemetry: Consumes live position, speed, delay, bearing, and next-halt info) Tj ET
+BT /F1 9 Tf 62 620 Td (from external APIs.) Tj ET
+BT /F2 9 Tf 50 606 Td (\225 ) Tj ET
+BT /F1 9 Tf 62 606 Td (Track Geometry Snapping: Snaps and interpolates raw coordinates directly onto physical) Tj ET
+BT /F1 9 Tf 62 594 Td (railway GeoJSON tracks.) Tj ET
+BT /F2 9 Tf 50 580 Td (\225 ) Tj ET
+BT /F1 9 Tf 62 580 Td (Live WebSocket Delivery: Pushes telemetry over persistent STOMP/SockJS WebSockets) Tj ET
+BT /F1 9 Tf 62 568 Td (without browser refreshing.) Tj ET
+BT /F2 9 Tf 50 554 Td (\225 ) Tj ET
+BT /F1 9 Tf 62 554 Td (Physical Railway Layer: Integrates OpenRailwayMap into Leaflet to render actual tracks,) Tj ET
+BT /F1 9 Tf 62 542 Td (junctions, and switches.) Tj ET
+BT /F2 12 Tf 0.15 0.3 0.6 rg 50 514 Td (2. Environment & Toolchain Setup) Tj ET 0 0 0 rg
+BT /F1 9 Tf 50 498 Td (During the deployment process, the local development environment was upgraded to modern) Tj ET
+BT /F1 9 Tf 50 486 Td (standards:) Tj ET
+BT /F2 9 Tf 50 470 Td (\225 ) Tj ET
+BT /F1 9 Tf 62 470 Td (Java Environment: System previously had Java 8 \(JRE 1.8.0_503\). Configured to use JDK 27) Tj ET
+BT /F1 9 Tf 62 458 Td (located at C:\\jdk-27.0.1.1 \(Java 27.0.1.1 64-bit\), fully compatible with Spring Boot 3) Tj ET
+BT /F1 9 Tf 62 446 Td (Java 17+ requirement.) Tj ET
+BT /F2 9 Tf 50 432 Td (\225 ) Tj ET
+BT /F1 9 Tf 62 432 Td (Build Tool: Downloaded and configured Apache Maven 3.9.9 locally into) Tj ET
+BT /F1 9 Tf 62 420 Td (.tools\\apache-maven.) Tj ET
+BT /F2 9 Tf 50 406 Td (\225 ) Tj ET
+BT /F1 9 Tf 62 406 Td (Execution Scripts: Created run.bat and run.ps1 scripts that automatically configure) Tj ET
+BT /F1 9 Tf 62 394 Td (JAVA_HOME and M2_HOME paths.) Tj ET
+BT /F2 12 Tf 0.15 0.3 0.6 rg 50 366 Td (3. External API Verification \(RailRadar\)) Tj ET 0 0 0 rg
+BT /F1 9 Tf 50 350 Td (The user provided a live RailRadar developer API key: rg_92e533fd40574b779cfe224dc2b760b5.) Tj ET
+BT /F1 9 Tf 50 334 Td (This key was verified against live Indian Railways servers:) Tj ET
+BT /F2 9 Tf 50 318 Td (\225 ) Tj ET
+BT /F1 9 Tf 62 318 Td (Live Telemetry: GET https://api.railradar.in/v1/trains/12002/live \(Shatabdi Express\) -) Tj ET
+BT /F1 9 Tf 62 306 Td (HTTP 200 OK.) Tj ET
+BT /F2 9 Tf 50 292 Td (\225 ) Tj ET
+BT /F1 9 Tf 62 292 Td (Live Night Express: GET https://api.railradar.in/v1/trains/12952/live \(Tejas Rajdhani\) -) Tj ET
+BT /F1 9 Tf 62 280 Td (HTTP 200 OK \(357.8 km progress\).) Tj ET
+BT /F2 9 Tf 50 266 Td (\225 ) Tj ET
+BT /F1 9 Tf 62 266 Td (Route Geometry: GET https://api.railradar.in/v1/trains/12002/route?format=geojson - HTTP) Tj ET
+BT /F1 9 Tf 62 254 Td (200 OK GeoJSON LineString.) Tj ET
+
+endstream
+endobj
+8 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 9 0 R >>
+endobj
+9 0 obj
+<< /Length 3399 >>
+stream
+BT /F2 8 Tf 50 810 Td (REAL-TIME TRAIN TRACKER - SYSTEM SUMMARY & HANDOVER REPORT) Tj ET
+0.5 0.5 0.5 RG 0.5 w 50 805 m 545 805 l S 0 0 0 RG
+0.5 0.5 0.5 RG 0.5 w 50 40 m 545 40 l S 0 0 0 RG
+BT /F1 8 Tf 50 30 Td (Generated for AI Handover & Next Development Steps | Page 2) Tj ET
+BT /F2 16 Tf 0.1 0.2 0.4 rg 50 778 Td (Modifications & Technical Enhancements) Tj ET 0 0 0 rg
+BT /F2 12 Tf 0.15 0.3 0.6 rg 50 742 Td (4. Detailed File-by-File Changes) Tj ET 0 0 0 rg
+BT /F2 10 Tf 0.2 0.2 0.2 rg 50 718 Td (A. LiveDataProviderService.java) Tj ET 0 0 0 rg
+BT /F1 9 Tf 50 704 Td (Modernized the provider service to support the official RailRadar v1 REST specification:) Tj ET
+BT /F2 9 Tf 50 688 Td (\225 ) Tj ET
+BT /F1 9 Tf 62 688 Td (Dynamic URLs: Configured endpoints for /trains/{trainNumber}/live and) Tj ET
+BT /F1 9 Tf 62 676 Td (/trains/{trainNumber}/route?format=geojson.) Tj ET
+BT /F2 9 Tf 50 662 Td (\225 ) Tj ET
+BT /F1 9 Tf 62 662 Td (Telemetry Parsing: Handles nested data.currentLocation objects \(lat, lng, speedKmh,) Tj ET
+BT /F1 9 Tf 62 650 Td (bearingDegrees, segmentProgress, delayMinutes\).) Tj ET
+BT /F2 9 Tf 50 636 Td (\225 ) Tj ET
+BT /F1 9 Tf 62 636 Td (Progress Fallback: If direct coordinates are omitted, computes segmentProgress =) Tj ET
+BT /F1 9 Tf 62 624 Td (distanceFromOriginKm / totalDistance.) Tj ET
+BT /F2 9 Tf 50 610 Td (\225 ) Tj ET
+BT /F1 9 Tf 62 610 Td (GeoJSON Extraction: Unwraps data.geojson Feature objects directly for clean Leaflet) Tj ET
+BT /F1 9 Tf 62 598 Td (consumption.) Tj ET
+BT /F2 10 Tf 0.2 0.2 0.2 rg 50 576 Td (B. PositionProcessingService.java) Tj ET 0 0 0 rg
+BT /F1 9 Tf 50 562 Td (Upgraded spatial processing algorithms to handle complex GeoJSON geometries:) Tj ET
+BT /F2 9 Tf 50 546 Td (\225 ) Tj ET
+BT /F1 9 Tf 62 546 Td (Multi-format Coords: Extracts coordinate arrays from both raw LineStrings and GeoJSON) Tj ET
+BT /F1 9 Tf 62 534 Td (Features with geometry.coordinates.) Tj ET
+BT /F2 9 Tf 50 520 Td (\225 ) Tj ET
+BT /F1 9 Tf 62 520 Td (Full-Route Interpolation: Added interpolateAlongEntireRoute\(geoJson, fraction\) using) Tj ET
+BT /F1 9 Tf 62 508 Td (Haversine segment calculations to place trains along the exact railway track based on) Tj ET
+BT /F1 9 Tf 62 496 Td (route distance progress.) Tj ET
+BT /F2 9 Tf 50 482 Td (\225 ) Tj ET
+BT /F1 9 Tf 62 482 Td (Route Snapping: Added snapToRoute\(\) to constrain GPS drift within a 500-meter tolerance.) Tj ET
+BT /F2 10 Tf 0.2 0.2 0.2 rg 50 460 Td (C. Database Architecture & H2 Embedded Profile) Tj ET 0 0 0 rg
+BT /F1 9 Tf 50 446 Td (To eliminate MySQL dependency blocks for immediate deployment, an embedded in-memory H2) Tj ET
+BT /F1 9 Tf 50 434 Td (profile was built:) Tj ET
+BT /F2 9 Tf 50 418 Td (\225 ) Tj ET
+BT /F1 9 Tf 62 418 Td (pom.xml: Added com.h2database:h2 runtime dependency alongside MySQL driver.) Tj ET
+BT /F2 9 Tf 50 404 Td (\225 ) Tj ET
+BT /F1 9 Tf 62 404 Td (application-h2.properties: Configured H2 in-memory URL \(jdbc:h2:mem:train_tracker\),) Tj ET
+BT /F1 9 Tf 62 392 Td (Hibernate H2 dialect, and Jackson configuration.) Tj ET
+BT /F2 9 Tf 50 378 Td (\225 ) Tj ET
+BT /F1 9 Tf 62 378 Td (DatabaseSeeder.java: Created a clean Spring CommandLineRunner that seeds reference) Tj ET
+BT /F1 9 Tf 62 366 Td (stations \(NDLS, BCT, AGC, BPL, etc.\), trains, and GeoJSON routes programmatically via) Tj ET
+BT /F1 9 Tf 62 354 Td (JPA repositories, avoiding raw SQL syntax errors.) Tj ET
+
+endstream
+endobj
+10 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 11 0 R >>
+endobj
+11 0 obj
+<< /Length 3534 >>
+stream
+BT /F2 8 Tf 50 810 Td (REAL-TIME TRAIN TRACKER - SYSTEM SUMMARY & HANDOVER REPORT) Tj ET
+0.5 0.5 0.5 RG 0.5 w 50 805 m 545 805 l S 0 0 0 RG
+0.5 0.5 0.5 RG 0.5 w 50 40 m 545 40 l S 0 0 0 RG
+BT /F1 8 Tf 50 30 Td (Generated for AI Handover & Next Development Steps | Page 3) Tj ET
+BT /F2 16 Tf 0.1 0.2 0.4 rg 50 778 Td (Frontend Upgrades & Handover Action Plan) Tj ET 0 0 0 rg
+BT /F2 12 Tf 0.15 0.3 0.6 rg 50 742 Td (D. Leaflet Frontend UI & Railway Track Layer) Tj ET 0 0 0 rg
+BT /F1 9 Tf 50 726 Td (Enhanced the browser frontend \(src/main/resources/static/\):) Tj ET
+BT /F2 9 Tf 50 710 Td (\225 ) Tj ET
+BT /F1 9 Tf 62 710 Td (OpenRailwayMap Tile Layer: Added) Tj ET
+BT /F1 9 Tf 62 698 Td (https://{s}.tiles.openrailwaymap.org/standard/{z}/{x}/{y}.png overlay, rendering real) Tj ET
+BT /F1 9 Tf 62 686 Td (physical railway lines, signals, switches, and tracks beneath the train marker.) Tj ET
+BT /F2 9 Tf 50 672 Td (\225 ) Tj ET
+BT /F1 9 Tf 62 672 Td (Layer Control Switcher: Users can toggle between 'Dark Railway View', 'Standard Map',) Tj ET
+BT /F1 9 Tf 62 660 Td (and 'Railway Tracks \(OpenRailwayMap\)'.) Tj ET
+BT /F2 9 Tf 50 646 Td (\225 ) Tj ET
+BT /F1 9 Tf 62 646 Td (Marker & Animation: Added animated CSS radar pulse beacon \(.train-beacon-pulse\), bearing) Tj ET
+BT /F1 9 Tf 62 634 Td (rotation, and station halt popups.) Tj ET
+BT /F2 9 Tf 50 620 Td (\225 ) Tj ET
+BT /F1 9 Tf 62 620 Td (Dynamic On-Demand Import: When searching any 5-digit train number, the backend queries) Tj ET
+BT /F1 9 Tf 62 608 Td (RailRadar, persists the route geometry, and loads it into Leaflet.) Tj ET
+BT /F2 12 Tf 0.15 0.3 0.6 rg 50 580 Td (5. How to Run the Project) Tj ET 0 0 0 rg
+BT /F1 9 Tf 50 564 Td (The application can be started using the pre-configured scripts:) Tj ET
+0.95 0.95 0.95 rg 50 471 495 87 re f
+0.8 0.8 0.8 RG 0.5 w 50 471 495 87 re S 0 0 0 RG 0 0 0 rg
+BT /F3 8 Tf 58 548 Td (# Option 1: Run the startup batch file) Tj ET
+BT /F3 8 Tf 58 537 Td (.\\run.bat) Tj ET
+BT /F3 8 Tf 58 526 Td () Tj ET
+BT /F3 8 Tf 58 515 Td (# Option 2: Run via standalone packaged JAR using Java 27) Tj ET
+BT /F3 8 Tf 58 504 Td (& 'C:\\jdk-27.0.1.1\\bin\\java.exe' -jar target\\train-tracker-1.0.0.jar --spring.profiles.active=h2) Tj ET
+BT /F3 8 Tf 58 493 Td () Tj ET
+BT /F3 8 Tf 58 482 Td (# Open in browser: http://localhost:8080) Tj ET
+BT /F2 12 Tf 0.15 0.3 0.6 rg 50 439 Td (6. Action Plan for Next AI / Developer) Tj ET 0 0 0 rg
+BT /F2 9 Tf 50 423 Td (\225 ) Tj ET
+BT /F1 9 Tf 62 423 Td (Task 1 - Multi-Train Tracking: Currently, tracking focuses on one train at a time.) Tj ET
+BT /F1 9 Tf 62 411 Td (Enhance TrackingService and app.js to support multi-train tracking on a single map view) Tj ET
+BT /F1 9 Tf 62 399 Td (simultaneously.) Tj ET
+BT /F2 9 Tf 50 385 Td (\225 ) Tj ET
+BT /F1 9 Tf 62 385 Td (Task 2 - ETA & Delay Timeline: Render intermediate station timeline in the sidebar with) Tj ET
+BT /F1 9 Tf 62 373 Td (live arrival countdowns and delayed flags.) Tj ET
+BT /F2 9 Tf 50 359 Td (\225 ) Tj ET
+BT /F1 9 Tf 62 359 Td (Task 3 - MySQL Production Profile: To switch from H2 to MySQL, start MySQL service on) Tj ET
+BT /F1 9 Tf 62 347 Td (3306, create train_tracker DB using sql/schema.sql, and launch without the) Tj ET
+BT /F1 9 Tf 62 335 Td (--spring.profiles.active=h2 flag.) Tj ET
+BT /F2 9 Tf 50 321 Td (\225 ) Tj ET
+BT /F1 9 Tf 62 321 Td (Task 4 - Production Deployment: Create a Dockerfile with openjdk:17-slim or) Tj ET
+BT /F1 9 Tf 62 309 Td (eclipse-temurin:17 for one-click cloud hosting \(Render, AWS ECS, or DigitalOcean\).) Tj ET
+
+endstream
+endobj
+xref
+0 12
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000128 00000 n 
+0000000225 00000 n 
+0000000327 00000 n 
+0000000422 00000 n 
+0000000568 00000 n 
+0000004584 00000 n 
+0000004730 00000 n 
+0000008181 00000 n 
+0000008329 00000 n 
+trailer
+<< /Size 12 /Root 1 0 R >>
+startxref
+11916
+%%EOF
