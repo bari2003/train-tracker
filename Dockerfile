@@ -16,9 +16,8 @@ WORKDIR /app
 # Copy JAR from build stage
 COPY --from=build /app/target/*.jar app.jar
 
-# Render assigns dynamic PORT environment variable (default 8080)
-ENV PORT=8080
-EXPOSE 8080
+# Tell Render both ports can receive traffic
+EXPOSE 8080 10000
 
-# Launch Spring Boot with dynamic port
-ENTRYPOINT ["java", "-Djava.security.egd=file:/dev/./urandom", "-jar", "app.jar"]
+# Launch Spring Boot dynamically binding to Render's assigned port and all interfaces (0.0.0.0)
+ENTRYPOINT ["sh", "-c", "java -Dserver.port=${PORT:-8080} -Dserver.address=0.0.0.0 -Djava.security.egd=file:/dev/./urandom -jar app.jar"]
